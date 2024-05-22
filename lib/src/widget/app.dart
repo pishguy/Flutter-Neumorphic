@@ -36,6 +36,58 @@ class NeumorphicApp extends StatelessWidget {
 
   final bool debugShowMaterialGrid;
 
+  const NeumorphicApp.router({
+    super.key,
+    this.scaffoldMessengerKey,
+    this.routeInformationProvider,
+    this.routeInformationParser,
+    this.routerDelegate,
+    this.routerConfig,
+    this.backButtonDispatcher,
+    this.builder,
+    this.title = '',
+    this.onGenerateTitle,
+    this.onNavigationNotification,
+    this.color,
+    this.theme,
+    this.darkTheme,
+    this.highContrastTheme,
+    this.highContrastDarkTheme,
+    this.themeMode = ThemeMode.system,
+    this.themeAnimationDuration = kThemeAnimationDuration,
+    this.themeAnimationCurve = Curves.linear,
+    this.locale,
+    this.localizationsDelegates,
+    this.localeListResolutionCallback,
+    this.localeResolutionCallback,
+    this.supportedLocales = const <Locale>[Locale('en', 'US')],
+    this.debugShowMaterialGrid = false,
+    this.showPerformanceOverlay = false,
+    this.checkerboardRasterCacheImages = false,
+    this.checkerboardOffscreenLayers = false,
+    this.showSemanticsDebugger = false,
+    this.debugShowCheckedModeBanner = true,
+    this.shortcuts,
+    this.actions,
+    this.restorationScopeId,
+    this.scrollBehavior,
+    @Deprecated(
+        'Remove this parameter as it is now ignored. '
+            'MaterialApp never introduces its own MediaQuery; the View widget takes care of that. '
+            'This feature was deprecated after v3.7.0-29.0.pre.'
+    )
+    this.useInheritedMediaQuery = false,
+    this.themeAnimationStyle,
+  }) : assert(routerDelegate != null || routerConfig != null),
+        navigatorObservers = null,
+        navigatorKey = null,
+        onGenerateRoute = null,
+        home = null,
+        onGenerateInitialRoutes = null,
+        onUnknownRoute = null,
+        routes = null,
+        initialRoute = null;
+
   const NeumorphicApp({
     Key? key,
     this.title = '',
